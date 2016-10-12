@@ -15,6 +15,14 @@ namespace FriendlyChainsaw
         public Form1()
         {
             InitializeComponent();
+
+#if DEBUG
+            buildMessage.Text = "DEBUG";
+#elif QA
+            buildMessage.Text="QA";
+#else
+            buildMessage.Text="RELEASE";
+#endif
         }
     }
 }
